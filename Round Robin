@@ -33,7 +33,7 @@ void findWaitingTime(int processes[], int n,
                 {
                     // Increase the value of t i.e. shows
                     // how much time a process has been processed
-                    t += quantum;
+                    t= t+quantum;
  
                     // Decrease the burst_time of current process
                     // by quantum
@@ -110,14 +110,11 @@ void findavgTime(int processes[], int n, int bt[],
 // Driver code
 int main()
 {
-    // process id's
     int processes[] = { 1, 2, 3};
     int n = sizeof processes / sizeof processes[0];
  
-    // Burst time of all processes
     int burst_time[] = {10, 5, 8};
  
-    // Time quantum
     int quantum = 2;
     findavgTime(processes, n, burst_time, quantum);
     return 0;
